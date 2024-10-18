@@ -1,9 +1,9 @@
 import React from 'react'
-import { lusitana } from '../ui/fonts'
-import { fetchCardData, fetchLatestInvoices, fetchRevenue } from '../lib/data'
-import RevenueChart from '../ui/dashboard/revenue-chart'
-import LatestInvoices from '../ui/dashboard/latest-invoices'
-import { Card } from '../ui/dashboard/cards'
+import { lusitana } from '../../ui/fonts'
+import { fetchCardData, fetchLatestInvoices, fetchRevenue } from '../../lib/data'
+import RevenueChart from '../../ui/dashboard/revenue-chart'
+import LatestInvoices from '../../ui/dashboard/latest-invoices'
+import { Card } from '../../ui/dashboard/cards'
 
 async function Dashboard() {
     const revenue = await fetchRevenue()
@@ -34,7 +34,7 @@ async function Dashboard() {
                 />
                 <Card
                     title='Total Customers'
-                    value={numberOfInvoices}
+                    value={numberOfCustomers}
                     type='customers'
                 />
             </div>
